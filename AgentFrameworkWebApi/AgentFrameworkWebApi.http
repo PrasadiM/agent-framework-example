@@ -1,0 +1,25 @@
+@AgentFrameworkWebApi_HostAddress = http://localhost:5294
+
+GET {{AgentFrameworkWebApi_HostAddress}}/agent
+Accept: application/json
+
+###
+
+POST {{AgentFrameworkWebApi_HostAddress}}/agent/chat
+Content-Type: application/json
+Accept: application/json
+
+{
+  "message": "Explain what this sample demonstrates."
+}
+
+###
+
+POST {{AgentFrameworkWebApi_HostAddress}}/agent/chat
+Content-Type: application/json
+Accept: application/json
+
+{
+  "sessionId": "demo-session",
+  "message": "Continue the same conversation."
+}
